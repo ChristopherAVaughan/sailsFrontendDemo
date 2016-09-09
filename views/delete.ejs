@@ -1,0 +1,25 @@
+<ol class="breadcrumb">
+    <li class="active">Home</a></li>
+</ol>
+
+<br/>
+
+<%- partial ('partials/statusmessage.ejs') %>
+
+<h2>Enter claimant to be deleted by their id:</h2>
+<form action="/delete" method="POST" class="form-horizontal">
+  <div class="form-group">
+
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="id" name="id" placeholder="Enter ID here">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Delete Claimant</button>
+    </div>
+  </div>
+</form>
+
+
+

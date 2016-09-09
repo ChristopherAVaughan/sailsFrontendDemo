@@ -6,30 +6,33 @@
 
 <%- partial ('partials/statusmessage.ejs') %>
 
-<h2>Employees</h2>
+<h2>Disability Claimants</h2>
 <table class="table table-striped table-bordered">
   <tr>
     <th>ID</th>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Email</th>
-    <th>Home Phone</th>
-    <th>Cell Phone</th>
     <th>Password</th>
-    <th>Active</th>
+    <th>Home Phone</th>
+    <th>Disability</th>
+    <th>Approved</th>
   </tr>
-  <% if(typeof employees != "undefined" && employees.length > 0){ %>
-    <% employees.forEach(function(employee){ %>
+
+  <% if(typeof disabilityclaimants != "undefined" && disabilityclaimants.length > 0){ %>
+    <% disabilityclaimants.forEach(function(disabilityclaimant){ %>
+
       <tr>
-        <td><%= employee.id %></td>
-        <td><%= employee.firstName %></td>
-        <td><%= employee.lastName %></td>
-        <td><%= employee.email %></td>
-        <td><%= employee.homePhone %></td>
-        <td><%= employee.cellPhone %></td>
-        <td><%= employee.password %></td>
-        <td><%= employee.active %></td>
+        <td><%= disabilityclaimant.id %></td>
+        <td><%= disabilityclaimant.firstName %></td>
+        <td><%= disabilityclaimant.lastName %></td>
+        <td><%= disabilityclaimant.email %></td>
+        <td><%= disabilityclaimant.password %></td>
+        <td><%= disabilityclaimant.homePhone %></td>
+        <td><%= disabilityclaimant.disability %></td>
+        <td><%= disabilityclaimant.approved %></td>
       </tr>
+
     <% }) %>
   <% }else{ %>
       <tr>
